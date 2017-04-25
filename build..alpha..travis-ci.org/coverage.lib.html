@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-connect/connect/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-connect/node_modules/connect/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -190,9 +192,9 @@
 <body>
 <div class="header low">
     <h1 style="font-weight: bold;">
-        <a href="https://github.com/npmtest/node-npmtest-connect">npmtest-connect (v0.0.2)</a>
+        <a href="https://github.com/npmtest/node-npmtest-connect">npmtest-connect (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-connect/connect/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-connect/node_modules/connect/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">20.41% <small>(20 / 98)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric">1 statement, 1 function, 1 branch</span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-connect/connect/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-connect/node_modules/connect/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -814,13 +816,13 @@ module.exports = createServer;
  * @private
  */
 &nbsp;
-var env = process.env.NODE_ENV || <span class="branch-1 cbranch-no" title="branch not covered">'development';</span>
+var env = process.env.NODE_ENV || <span class="branch-1 cbranch-no" title="branch not covered" >'development';</span>
 var proto = {};
 &nbsp;
 /* istanbul ignore next */
 var defer = typeof setImmediate === 'function'
   ? setImmediate
-  : <span class="fstat-skip" title="function not covered"><span class="branch-1 cbranch-skip" title="branch not covered">function(fn){</span> <span class="cstat-skip" title="statement not covered">process.nextTick(fn.bind.apply(fn, arguments)) }</span></span>
+  : <span class="fstat-skip" title="function not covered" ><span class="branch-1 cbranch-skip" title="branch not covered" >function(fn){</span> <span class="cstat-skip" title="statement not covered" >process.nextTick(fn.bind.apply(fn, arguments)) }</span></span>
 &nbsp;
 /**
  * Create a new connect server.
@@ -829,13 +831,13 @@ var defer = typeof setImmediate === 'function'
  * @public
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function createServer() {</span>
-<span class="fstat-no" title="function not covered">  function app(req, res, next){</span> <span class="cstat-no" title="statement not covered">app.handle(req, res, next); </span>}
-<span class="cstat-no" title="statement not covered">  merge(app, proto);</span>
-<span class="cstat-no" title="statement not covered">  merge(app, EventEmitter.prototype);</span>
-<span class="cstat-no" title="statement not covered">  app.route = '/';</span>
-<span class="cstat-no" title="statement not covered">  app.stack = [];</span>
-<span class="cstat-no" title="statement not covered">  return app;</span>
+<span class="fstat-no" title="function not covered" >function createServer() {</span>
+<span class="fstat-no" title="function not covered" >  function app(req, res, next){</span> <span class="cstat-no" title="statement not covered" >app.handle(req, res, next); </span>}
+<span class="cstat-no" title="statement not covered" >  merge(app, proto);</span>
+<span class="cstat-no" title="statement not covered" >  merge(app, EventEmitter.prototype);</span>
+<span class="cstat-no" title="statement not covered" >  app.route = '/';</span>
+<span class="cstat-no" title="statement not covered" >  app.stack = [];</span>
+<span class="cstat-no" title="statement not covered" >  return app;</span>
 }
 &nbsp;
 /**
@@ -855,40 +857,40 @@ var defer = typeof setImmediate === 'function'
  * @public
  */
 &nbsp;
-proto.use = <span class="fstat-no" title="function not covered">function use(route, fn) {</span>
-<span class="cstat-no" title="statement not covered">  var handle = fn;</span>
-<span class="cstat-no" title="statement not covered">  var path = route;</span>
+proto.use = <span class="fstat-no" title="function not covered" >function use(route, fn) {</span>
+<span class="cstat-no" title="statement not covered" >  var handle = fn;</span>
+<span class="cstat-no" title="statement not covered" >  var path = route;</span>
 &nbsp;
   // default route to '/'
-<span class="cstat-no" title="statement not covered">  if (typeof route !== 'string') {</span>
-<span class="cstat-no" title="statement not covered">    handle = route;</span>
-<span class="cstat-no" title="statement not covered">    path = '/';</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof route !== 'string') {</span>
+<span class="cstat-no" title="statement not covered" >    handle = route;</span>
+<span class="cstat-no" title="statement not covered" >    path = '/';</span>
   }
 &nbsp;
   // wrap sub-apps
-<span class="cstat-no" title="statement not covered">  if (typeof handle.handle === 'function') {</span>
-<span class="cstat-no" title="statement not covered">    var server = handle;</span>
-<span class="cstat-no" title="statement not covered">    server.route = path;</span>
-<span class="cstat-no" title="statement not covered">    handle = <span class="fstat-no" title="function not covered">function (req, res, next) {</span></span>
-<span class="cstat-no" title="statement not covered">      server.handle(req, res, next);</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof handle.handle === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >    var server = handle;</span>
+<span class="cstat-no" title="statement not covered" >    server.route = path;</span>
+<span class="cstat-no" title="statement not covered" >    handle = <span class="fstat-no" title="function not covered" >function (req, res, next) {</span></span>
+<span class="cstat-no" title="statement not covered" >      server.handle(req, res, next);</span>
     };
   }
 &nbsp;
   // wrap vanilla http.Servers
-<span class="cstat-no" title="statement not covered">  if (handle instanceof http.Server) {</span>
-<span class="cstat-no" title="statement not covered">    handle = handle.listeners('request')[0];</span>
+<span class="cstat-no" title="statement not covered" >  if (handle instanceof http.Server) {</span>
+<span class="cstat-no" title="statement not covered" >    handle = handle.listeners('request')[0];</span>
   }
 &nbsp;
   // strip trailing slash
-<span class="cstat-no" title="statement not covered">  if (path[path.length - 1] === '/') {</span>
-<span class="cstat-no" title="statement not covered">    path = path.slice(0, -1);</span>
+<span class="cstat-no" title="statement not covered" >  if (path[path.length - 1] === '/') {</span>
+<span class="cstat-no" title="statement not covered" >    path = path.slice(0, -1);</span>
   }
 &nbsp;
   // add the middleware
-<span class="cstat-no" title="statement not covered">  debug('use %s %s', path || '/', handle.name || 'anonymous');</span>
-<span class="cstat-no" title="statement not covered">  this.stack.push({ route: path, handle: handle });</span>
+<span class="cstat-no" title="statement not covered" >  debug('use %s %s', path || '/', handle.name || 'anonymous');</span>
+<span class="cstat-no" title="statement not covered" >  this.stack.push({ route: path, handle: handle });</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return this;</span>
+<span class="cstat-no" title="statement not covered" >  return this;</span>
 };
 &nbsp;
 /**
@@ -898,74 +900,74 @@ proto.use = <span class="fstat-no" title="function not covered">function use(rou
  * @private
  */
 &nbsp;
-proto.handle = <span class="fstat-no" title="function not covered">function handle(req, res, out) {</span>
-<span class="cstat-no" title="statement not covered">  var index = 0;</span>
-<span class="cstat-no" title="statement not covered">  var protohost = getProtohost(req.url) || '';</span>
-<span class="cstat-no" title="statement not covered">  var removed = '';</span>
-<span class="cstat-no" title="statement not covered">  var slashAdded = false;</span>
-<span class="cstat-no" title="statement not covered">  var stack = this.stack;</span>
+proto.handle = <span class="fstat-no" title="function not covered" >function handle(req, res, out) {</span>
+<span class="cstat-no" title="statement not covered" >  var index = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var protohost = getProtohost(req.url) || '';</span>
+<span class="cstat-no" title="statement not covered" >  var removed = '';</span>
+<span class="cstat-no" title="statement not covered" >  var slashAdded = false;</span>
+<span class="cstat-no" title="statement not covered" >  var stack = this.stack;</span>
 &nbsp;
   // final function handler
-<span class="cstat-no" title="statement not covered">  var done = out || finalhandler(req, res, {</span>
+<span class="cstat-no" title="statement not covered" >  var done = out || finalhandler(req, res, {</span>
     env: env,
     onerror: logerror
   });
 &nbsp;
   // store the original URL
-<span class="cstat-no" title="statement not covered">  req.originalUrl = req.originalUrl || req.url;</span>
+<span class="cstat-no" title="statement not covered" >  req.originalUrl = req.originalUrl || req.url;</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">  function next(err) {</span>
-<span class="cstat-no" title="statement not covered">    if (slashAdded) {</span>
-<span class="cstat-no" title="statement not covered">      req.url = req.url.substr(1);</span>
-<span class="cstat-no" title="statement not covered">      slashAdded = false;</span>
+<span class="fstat-no" title="function not covered" >  function next(err) {</span>
+<span class="cstat-no" title="statement not covered" >    if (slashAdded) {</span>
+<span class="cstat-no" title="statement not covered" >      req.url = req.url.substr(1);</span>
+<span class="cstat-no" title="statement not covered" >      slashAdded = false;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (removed.length !== 0) {</span>
-<span class="cstat-no" title="statement not covered">      req.url = protohost + removed + req.url.substr(protohost.length);</span>
-<span class="cstat-no" title="statement not covered">      removed = '';</span>
+<span class="cstat-no" title="statement not covered" >    if (removed.length !== 0) {</span>
+<span class="cstat-no" title="statement not covered" >      req.url = protohost + removed + req.url.substr(protohost.length);</span>
+<span class="cstat-no" title="statement not covered" >      removed = '';</span>
     }
 &nbsp;
     // next callback
-<span class="cstat-no" title="statement not covered">    var layer = stack[index++];</span>
+<span class="cstat-no" title="statement not covered" >    var layer = stack[index++];</span>
 &nbsp;
     // all done
-<span class="cstat-no" title="statement not covered">    if (!layer) {</span>
-<span class="cstat-no" title="statement not covered">      defer(done, err);</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >    if (!layer) {</span>
+<span class="cstat-no" title="statement not covered" >      defer(done, err);</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
 &nbsp;
     // route data
-<span class="cstat-no" title="statement not covered">    var path = parseUrl(req).pathname || '/';</span>
-<span class="cstat-no" title="statement not covered">    var route = layer.route;</span>
+<span class="cstat-no" title="statement not covered" >    var path = parseUrl(req).pathname || '/';</span>
+<span class="cstat-no" title="statement not covered" >    var route = layer.route;</span>
 &nbsp;
     // skip this layer if the route doesn't match
-<span class="cstat-no" title="statement not covered">    if (path.toLowerCase().substr(0, route.length) !== route.toLowerCase()) {</span>
-<span class="cstat-no" title="statement not covered">      return next(err);</span>
+<span class="cstat-no" title="statement not covered" >    if (path.toLowerCase().substr(0, route.length) !== route.toLowerCase()) {</span>
+<span class="cstat-no" title="statement not covered" >      return next(err);</span>
     }
 &nbsp;
     // skip if route match does not border "/", ".", or end
-<span class="cstat-no" title="statement not covered">    var c = path[route.length];</span>
-<span class="cstat-no" title="statement not covered">    if (c !== undefined &amp;&amp; '/' !== c &amp;&amp; '.' !== c) {</span>
-<span class="cstat-no" title="statement not covered">      return next(err);</span>
+<span class="cstat-no" title="statement not covered" >    var c = path[route.length];</span>
+<span class="cstat-no" title="statement not covered" >    if (c !== undefined &amp;&amp; '/' !== c &amp;&amp; '.' !== c) {</span>
+<span class="cstat-no" title="statement not covered" >      return next(err);</span>
     }
 &nbsp;
     // trim off the part of the url that matches the route
-<span class="cstat-no" title="statement not covered">    if (route.length !== 0 &amp;&amp; route !== '/') {</span>
-<span class="cstat-no" title="statement not covered">      removed = route;</span>
-<span class="cstat-no" title="statement not covered">      req.url = protohost + req.url.substr(protohost.length + removed.length);</span>
+<span class="cstat-no" title="statement not covered" >    if (route.length !== 0 &amp;&amp; route !== '/') {</span>
+<span class="cstat-no" title="statement not covered" >      removed = route;</span>
+<span class="cstat-no" title="statement not covered" >      req.url = protohost + req.url.substr(protohost.length + removed.length);</span>
 &nbsp;
       // ensure leading slash
-<span class="cstat-no" title="statement not covered">      if (!protohost &amp;&amp; req.url[0] !== '/') {</span>
-<span class="cstat-no" title="statement not covered">        req.url = '/' + req.url;</span>
-<span class="cstat-no" title="statement not covered">        slashAdded = true;</span>
+<span class="cstat-no" title="statement not covered" >      if (!protohost &amp;&amp; req.url[0] !== '/') {</span>
+<span class="cstat-no" title="statement not covered" >        req.url = '/' + req.url;</span>
+<span class="cstat-no" title="statement not covered" >        slashAdded = true;</span>
       }
     }
 &nbsp;
     // call the layer handle
-<span class="cstat-no" title="statement not covered">    call(layer.handle, route, err, req, res, next);</span>
+<span class="cstat-no" title="statement not covered" >    call(layer.handle, route, err, req, res, next);</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  next();</span>
+<span class="cstat-no" title="statement not covered" >  next();</span>
 };
 &nbsp;
 /**
@@ -994,9 +996,9 @@ proto.handle = <span class="fstat-no" title="function not covered">function hand
  * @api public
  */
 &nbsp;
-proto.listen = <span class="fstat-no" title="function not covered">function listen() {</span>
-<span class="cstat-no" title="statement not covered">  var server = http.createServer(this);</span>
-<span class="cstat-no" title="statement not covered">  return server.listen.apply(server, arguments);</span>
+proto.listen = <span class="fstat-no" title="function not covered" >function listen() {</span>
+<span class="cstat-no" title="statement not covered" >  var server = http.createServer(this);</span>
+<span class="cstat-no" title="statement not covered" >  return server.listen.apply(server, arguments);</span>
 };
 &nbsp;
 /**
@@ -1004,30 +1006,30 @@ proto.listen = <span class="fstat-no" title="function not covered">function list
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function call(handle, route, err, req, res, next) {</span>
-<span class="cstat-no" title="statement not covered">  var arity = handle.length;</span>
-<span class="cstat-no" title="statement not covered">  var error = err;</span>
-<span class="cstat-no" title="statement not covered">  var hasError = Boolean(err);</span>
+<span class="fstat-no" title="function not covered" >function call(handle, route, err, req, res, next) {</span>
+<span class="cstat-no" title="statement not covered" >  var arity = handle.length;</span>
+<span class="cstat-no" title="statement not covered" >  var error = err;</span>
+<span class="cstat-no" title="statement not covered" >  var hasError = Boolean(err);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  debug('%s %s : %s', handle.name || '&lt;anonymous&gt;', route, req.originalUrl);</span>
+<span class="cstat-no" title="statement not covered" >  debug('%s %s : %s', handle.name || '&lt;anonymous&gt;', route, req.originalUrl);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  try {</span>
-<span class="cstat-no" title="statement not covered">    if (hasError &amp;&amp; arity === 4) {</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    if (hasError &amp;&amp; arity === 4) {</span>
       // error-handling middleware
-<span class="cstat-no" title="statement not covered">      handle(err, req, res, next);</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
-    } else <span class="cstat-no" title="statement not covered">if (!hasError &amp;&amp; arity &lt; 4) {</span>
+<span class="cstat-no" title="statement not covered" >      handle(err, req, res, next);</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
+    } else <span class="cstat-no" title="statement not covered" >if (!hasError &amp;&amp; arity &lt; 4) {</span>
       // request-handling middleware
-<span class="cstat-no" title="statement not covered">      handle(req, res, next);</span>
-<span class="cstat-no" title="statement not covered">      return;</span>
+<span class="cstat-no" title="statement not covered" >      handle(req, res, next);</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
     }
   } catch (e) {
     // replace the error
-<span class="cstat-no" title="statement not covered">    error = e;</span>
+<span class="cstat-no" title="statement not covered" >    error = e;</span>
   }
 &nbsp;
   // continue
-<span class="cstat-no" title="statement not covered">  next(error);</span>
+<span class="cstat-no" title="statement not covered" >  next(error);</span>
 }
 &nbsp;
 /**
@@ -1037,8 +1039,8 @@ proto.listen = <span class="fstat-no" title="function not covered">function list
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function logerror(err) {</span>
-<span class="cstat-no" title="statement not covered">  if (env !== 'test') <span class="cstat-no" title="statement not covered">console.error(err.stack || err.toString());</span></span>
+<span class="fstat-no" title="function not covered" >function logerror(err) {</span>
+<span class="cstat-no" title="statement not covered" >  if (env !== 'test') <span class="cstat-no" title="statement not covered" >console.error(err.stack || err.toString());</span></span>
 }
 &nbsp;
 /**
@@ -1048,28 +1050,27 @@ proto.listen = <span class="fstat-no" title="function not covered">function list
  * @private
  */
 &nbsp;
-<span class="fstat-no" title="function not covered">function getProtohost(url) {</span>
-<span class="cstat-no" title="statement not covered">  if (url.length === 0 || url[0] === '/') {</span>
-<span class="cstat-no" title="statement not covered">    return undefined;</span>
+<span class="fstat-no" title="function not covered" >function getProtohost(url) {</span>
+<span class="cstat-no" title="statement not covered" >  if (url.length === 0 || url[0] === '/') {</span>
+<span class="cstat-no" title="statement not covered" >    return undefined;</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var searchIndex = url.indexOf('?');</span>
-<span class="cstat-no" title="statement not covered">  var pathLength = searchIndex !== -1</span>
+<span class="cstat-no" title="statement not covered" >  var searchIndex = url.indexOf('?');</span>
+<span class="cstat-no" title="statement not covered" >  var pathLength = searchIndex !== -1</span>
     ? searchIndex
     : url.length;
-<span class="cstat-no" title="statement not covered">  var fqdnIndex = url.substr(0, pathLength).indexOf('://');</span>
+<span class="cstat-no" title="statement not covered" >  var fqdnIndex = url.substr(0, pathLength).indexOf('://');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return fqdnIndex !== -1</span>
+<span class="cstat-no" title="statement not covered" >  return fqdnIndex !== -1</span>
     ? url.substr(0, url.indexOf('/', 3 + fqdnIndex))
     : undefined;
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 21:58:26 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 25 2017 22:47:03 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
